@@ -20,12 +20,12 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      amount: +enteredAmount,
+      amount: enteredAmount,
       date: new Date(enteredDate),
     };
     //Execute the function in the child component
     props.onSaveExpenseData(expenseData);
-    // console.log(expenseData);
+    console.log("AAAAAAAAAAA", expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
@@ -57,8 +57,8 @@ const ExpenseForm = (props) => {
           <input
             type="date"
             min="2019-01-01"
-            step="2023-12-31"
-            value={setEnteredDate}
+            step="2022-12-31"
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
